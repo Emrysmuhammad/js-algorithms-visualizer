@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive JavaScript Algorithms & Data Structures Learning Platform">
+    <title>JS Algorithms Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">AlgoViz</h1>
+            <ul class="nav-links">
+                <li><a href="#sorting">Sorting</a></li>
+                <li><a href="#searching">Searching</a></li>
+                <li><a href="#structures">Data Structures</a></li>
+                <li><a href="#complexity">Complexity</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Master Algorithms Through Visualization</h2>
+            <p>Interactive learning platform for JavaScript algorithms and data structures</p>
+        </section>
+
+        <section id="sorting" class="algo-section">
+            <h2>Sorting Algorithms</h2>
+            <div class="algo-grid">
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1551431009-381d36ac3a99?w=400&h=300&fit=crop" alt="Bubble Sort">
+                    <h3>Bubble Sort</h3>
+                    <p>Time: O(n²) | Space: O(1)</p>
+                    <button class="btn btn-primary" onclick="startSorting('bubble')">Visualize</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1516534775068-bb57e39c1016?w=400&h=300&fit=crop" alt="Merge Sort">
+                    <h3>Merge Sort</h3>
+                    <p>Time: O(n log n) | Space: O(n)</p>
+                    <button class="btn btn-primary" onclick="startSorting('merge')">Visualize</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b3f4?w=400&h=300&fit=crop" alt="Quick Sort">
+                    <h3>Quick Sort</h3>
+                    <p>Time: O(n log n) avg | Space: O(log n)</p>
+                    <button class="btn btn-primary" onclick="startSorting('quick')">Visualize</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Heap Sort">
+                    <h3>Heap Sort</h3>
+                    <p>Time: O(n log n) | Space: O(1)</p>
+                    <button class="btn btn-primary" onclick="startSorting('heap')">Visualize</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="searching" class="algo-section">
+            <h2>Searching Algorithms</h2>
+            <div class="algo-grid">
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f5ae4e8e49e?w=400&h=300&fit=crop" alt="Linear Search">
+                    <h3>Linear Search</h3>
+                    <p>Time: O(n) | Space: O(1)</p>
+                    <button class="btn btn-primary" onclick="startSearching('linear')">Visualize</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=400&h=300&fit=crop" alt="Binary Search">
+                    <h3>Binary Search</h3>
+                    <p>Time: O(log n) | Space: O(1)</p>
+                    <button class="btn btn-primary" onclick="startSearching('binary')">Visualize</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="structures" class="algo-section">
+            <h2>Data Structures</h2>
+            <div class="algo-grid">
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1551626405-a484cbbaa5d2?w=400&h=300&fit=crop" alt="Stack">
+                    <h3>Stack (LIFO)</h3>
+                    <p>Insert/Delete: O(1) | Search: O(n)</p>
+                    <button class="btn btn-primary" onclick="startStructure('stack')">Explore</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Queue">
+                    <h3>Queue (FIFO)</h3>
+                    <p>Insert/Delete: O(1) | Search: O(n)</p>
+                    <button class="btn btn-primary" onclick="startStructure('queue')">Explore</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop" alt="Linked List">
+                    <h3>Linked List</h3>
+                    <p>Insert/Delete: O(1) | Search: O(n)</p>
+                    <button class="btn btn-primary" onclick="startStructure('linkedlist')">Explore</button>
+                </div>
+                <div class="algo-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop" alt="Binary Tree">
+                    <h3>Binary Tree</h3>
+                    <p>Insert/Delete: O(log n) avg | Search: O(log n) avg</p>
+                    <button class="btn btn-primary" onclick="startStructure('bst')">Explore</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="complexity" class="algo-section">
+            <h2>Big O Complexity Chart</h2>
+            <div class="complexity-chart">
+                <img src="https://images.unsplash.com/photo-1460925895917-adf4e565db73?w=800&h=400&fit=crop" alt="Complexity Chart" class="chart-img">
+                <div class="complexity-table">
+                    <table>
+                        <tr>
+                            <th>Notation</th>
+                            <th>Name</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr class="excellent">
+                            <td>O(1)</td>
+                            <td>Constant</td>
+                            <td>Hash Table Lookup</td>
+                        </tr>
+                        <tr class="good">
+                            <td>O(log n)</td>
+                            <td>Logarithmic</td>
+                            <td>Binary Search</td>
+                        </tr>
+                        <tr class="fair">
+                            <td>O(n)</td>
+                            <td>Linear</td>
+                            <td>Linear Search</td>
+                        </tr>
+                        <tr class="poor">
+                            <td>O(n log n)</td>
+                            <td>Linearithmic</td>
+                            <td>Merge Sort</td>
+                        </tr>
+                        <tr class="bad">
+                            <td>O(n²)</td>
+                            <td>Quadratic</td>
+                            <td>Bubble Sort</td>
+                        </tr>
+                        <tr class="worst">
+                            <td>O(2ⁿ)</td>
+                            <td>Exponential</td>
+                            <td>Recursive Fibonacci</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="visualization-area" id="visualizer">
+            <div class="viz-header">
+                <h3>Algorithm Visualization</h3>
+                <button class="btn btn-secondary" onclick="resetVisualization()">Reset</button>
+            </div>
+            <div class="viz-container">
+                <div class="canvas-area" id="canvas"></div>
+                <div class="controls">
+                    <label>Speed:</label>
+                    <input type="range" id="speedControl" min="1" max="100" value="50">
+                    <label>Array Size:</label>
+                    <input type="range" id="sizeControl" min="10" max="100" value="30">
+                    <button class="btn btn-primary" onclick="generateArray()">Generate Array</button>
+                </div>
+            </div>
+            <div class="stats">
+                <span>Comparisons: <strong id="comparisons">0</strong></span>
+                <span>Swaps: <strong id="swaps">0</strong></span>
+                <span>Time: <strong id="time">0</strong>ms</span>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 AlgoViz - Learn Algorithms Interactively</p>
+    </footer>
+
+    <script src="js/algorithms.js"></script>
+    <script src="js/visualizer.js"></script>
+    <script src="js/dataStructures.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
