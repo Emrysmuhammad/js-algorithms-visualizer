@@ -1,0 +1,9 @@
+{
+  "name": "js-algorithms-visualizer",
+  "version": "1.0.0",
+  "description": "Interactive JavaScript algorithms and data structures learning platform",
+  "main": "index.html",
+  "keywords": ["algorithms", "data-structures", "visualization", "learning"],
+  "author": "",
+  "license": "MIT"
+}
