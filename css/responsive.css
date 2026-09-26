@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .algo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .algo-card {
+        margin: 0 auto;
+    }
+
+    .complexity-table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+
+    .canvas-area {
+        min-height: 300px;
+    }
+
+    .controls {
+        gap: 1rem;
+    }
+
+    .controls input[type="range"] {
+        width: 100px;
+    }
+
+    .stats {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .algo-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .algo-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .canvas-area {
+        min-height: 250px;
+        padding: 1rem;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls input[type="range"] {
+        width: 100%;
+    }
+
+    .viz-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
